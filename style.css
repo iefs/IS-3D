@@ -28,7 +28,7 @@ img {
   --base-color: hsl(var(--hue) 100% 50%);
   --base-color-second: hsl(var(--hue) 100% 80%);
   --base-color-alt: hsl(var(--hue) 90% 60%);
-  --title-color: hsl(var(--hue) 100% 30%);
+  --title-color: hsl(var(--hue) 100% 40%);
   --text-color: hsl(0, 0%, 90%);
   --text-color-light: hsl(0, 0%, 100%);
   --body-color: hsl(0, 0%, 0%);
@@ -261,6 +261,7 @@ nav.show div.icon-close {
 /*====  HOME ============================ */
 #home {
   overflow: hidden;
+  background: var(--body-color-second);
 }
 
 #home .container {
@@ -287,9 +288,20 @@ nav.show div.icon-close {
   right: 2.93rem;
 }
 
+#home .image img.fundo {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -16.8%;
+  left: 16.7%;
+  z-index: 0;
+}
+
 #home .image img,
-#home .image::before {
-  border-radius: 0.25rem;
+#home .image::before,
+#home .image img.fundo {
+  border-radius: 0.5rem;
 }
 
 #home .text {
@@ -314,7 +326,7 @@ nav.show div.icon-close {
 
 /*====  ABOUT ============================ */
 #about {
-  background: var(--body-color-second);
+  background: var(--body-color);
 }
 
 #about .container {
@@ -336,6 +348,16 @@ nav.show div.icon-close {
   z-index: 0;
 }
 
+#about .image img.fundo2 {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -8.3%;
+  left: -33%;
+  z-index: 0;
+}
+
 #about .image img {
   position: relative;
 }
@@ -351,6 +373,9 @@ nav.show div.icon-close {
 }
 
 /*====  SERVICES ============================ */
+#services {
+  background: var(--body-color-second);
+}
 .cards.grid {
   gap: 1.5rem;
 }
@@ -361,6 +386,7 @@ nav.show div.icon-close {
   border-bottom: 0.25rem solid var(--base-color);
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
+  background: var(--body-color);
 }
 
 .card i {
@@ -443,7 +469,7 @@ nav.show div.icon-close {
 
 /*====  CONTACT ============================ */
 #contact {
-  background: var(--body-color-second);
+  background: var(--body-color);
 }
 
 #contact .grid {
@@ -475,7 +501,7 @@ nav.show div.icon-close {
 
 /*====  FOOTER ============================ */
 footer {
-  background: var(--body-color);
+  background: var(--body-color-second);
 }
 
 footer.section {
@@ -498,7 +524,7 @@ footer .brand p {
 
 footer i {
   font-size: 1.5rem;
-  color: var(--text-color-light);
+  color: var(--base-color);
 }
 
 footer .social {
